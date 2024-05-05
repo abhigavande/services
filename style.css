@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@500&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color: #2064ff;
+    --text-color: #243448;
+    --bg-color: #fff;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    color: var(--text-color);
+}
+
+section {
+    padding: 4.5rem 0 3rem;
+}
+
+.container {
+    max-width: 1068px;
+    margin: 0 auto;
+
+}
+
+header {
+    display: block;
+    width: 100%;
+    background: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 4px 4px 20px rgba(15, 54, 55, 0.1);
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+
+.navbar a {
+    padding: 8px 17px;
+    color: var(--text-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar .active {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 4px 4px 20px rgba(15, 54, 55, 0.2);
+}
+
+#menu {
+    display: none;
+
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    min-height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-img {
+    flex: 1 1 17rem;
+}
+
+.home-text {
+    flex: 1 1 17rem;
+}
+
+.home-text h1 {
+    font-size: 2.4rem;
+}
+
+.home-text p {
+    font-size: 0.938rem;
+    font-weight: 300;
+}
+
+.btn {
+    padding: 8px 22px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 300;
+    box-shadow: 4px 4px 20px rgba(15, 54, 55, 0.2);
+    margin-top: 10px;
+    /* Adjust the margin-top value as needed */
+}
+
+
+.btn:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-weight: 400;
+    border: 1px solid var(--text-color)
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading h2 {
+    font-size: 1.7rem;
+}
+
+.heading p {
+    font-size: .938rem;
+    font-weight: 300;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.service-container .box {
+    flex: 1 1 21rem;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--text-color);
+    border-radius: 0.5rem;
+    background: var(--bg-color);
+}
+
+
+.box:hover {
+    box-shadow: 4px 4px 20px rgb(15, 54, 55 / 20%);
+    transition: 0.2s;
+}
+
+.box img {
+    width: 250px;
+    height: 160px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1rem;
+}
+
+.box h2 {
+    font-size: 1.2rem;
+}
+
+.box p {
+    font-size: 0.938rem;
+    font-weight: 400;
+    margin: 0.5rem 0 1rem;
+}
+
+.box .s-btn {
+    padding: 8px 22px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-weight: 400;
+    border: 1px solid var(--text-color);
+    box-shadow: 4px 4px 20px rgb(15, 54, 55 / 20%);
+}
+
+.box .s-btn:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: 1px solid var(--main-color);
+    font-weight: 300;
+    transition: 0.2s all linear;
+}
+
+.Contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    /* You can adjust this for your desired height */
+}
+
+.contact-content {
+    margin-bottom: 2rem;
+}
+
+.contact-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img,
+    .home-text {
+        width: 100%;
+
+        margin: 1rem 0;
+    }
+
+    .home-text h1 {
+        font-size: 2rem;
+
+    }
+
+    .home-text p {
+        font-size: 0.875rem;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 10px 0;
+    }
+
+    #menu-icon {
+        display: initial;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        background: rgb(223, 223, 219);
+
+        text-align: center;
+        box-shadow: 4px 4px 20px rgb(15, 54, 55 / 20%);
+        clip-path: circle(0% at 50% 0%);
+        transition: 1s;
+
+    }
+
+    .navbar a {
+        display: block;
+        padding: 15px;
+    }
+
+    #menu:checked~.navbar {
+        clip-path: circle(144% at 50% 0%);
+    }
+
+}
